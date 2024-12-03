@@ -4,10 +4,7 @@ def check_diffs(diffs):
     return all([-3 <= d < 0 for d in diffs]) or all([0 < d <= 3 for d in diffs])
 
 def q1(diff):
-    if check_diffs(diff):
-        return 1
-    
-    return 0
+    return 1 if check_diffs(diff) else 0
 
 def q2(diff):
     if not check_diffs(diff):
