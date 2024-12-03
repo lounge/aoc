@@ -19,8 +19,10 @@ def q2(diff):
                 fixed.pop(0)
             elif i == len(report)-1: 
                 fixed.pop(-1)
-            else:                    
-                fixed[i-1] += fixed.pop(i)
+            else:             
+                d = fixed[i-1] + fixed.pop(i)    
+                fixed[i-1] = d # += fixed.pop(i)
+                # fixed.pop(i-1)
 
             if check_diffs(fixed):
                 return 1
