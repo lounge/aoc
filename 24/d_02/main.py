@@ -1,7 +1,5 @@
 import os, sys, re
 
-score1 = 0;
-
 def check_diffs(diffs):
     return all([-3 <= d < 0 for d in diffs]) or all([0 < d <= 3 for d in diffs])
 
